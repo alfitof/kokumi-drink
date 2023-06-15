@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Logo from "../assets/Logo.png";
 import css from "../styles/Navbar.module.css";
 
 const Navbar = () => {
@@ -25,8 +24,7 @@ const Navbar = () => {
         <nav className="max-w-screen-xl mx-auto grid grid-flow-col py-2 px-3">
           <Link href="/">
             <div className={css.logo}>
-              <Image src={Logo} alt="Logo" width={55} height={55} />
-              <span className="ml-2 text-blue-kokumi">Kokumi Drink</span>
+              <Image src="/image/Logo.png" alt="Logo" width={80} height={80} />
             </div>
           </Link>
           <ul className="hidden lg:flex col-start-8 col-end-8 text-gray-400  items-center justify-center">
@@ -35,36 +33,43 @@ const Navbar = () => {
                 className={
                   "px-4 py-2 mx-2 cursor-pointer font-semibold animation-hover inline-block relative" +
                   (router.pathname == "/"
-                    ? " text-blue-kokumi animation-active "
-                    : " text-gray-400 hover:text-blue-kokumi")
+                    ? " text-red-kokumi animation-active "
+                    : " text-gray-400 hover:text-red-kokumi")
                 }
               >
                 Home
               </div>
             </Link>
-            <Link activeClassName="active" href="/menupage">
+            <Link href="/menupage">
               <div
                 className={
                   "px-4 py-2 mx-2 cursor-pointer animation-hover font-semibold inline-block relative" +
                   (router.pathname == "/menupage"
-                    ? " text-blue-kokumi animation-active "
-                    : " text-gray-400 hover:text-blue-kokumi ")
+                    ? " text-red-kokumi animation-active "
+                    : " text-gray-400 hover:text-red-kokumi ")
                 }
               >
                 Menu
               </div>
             </Link>
-            <Link activeClassName="active" href="/contact">
+            <Link href="/contact">
               <div
                 className={
                   "px-4 py-2 mx-2 cursor-pointer animation-hover font-semibold inline-block relative" +
                   (router.pathname == "/contact"
-                    ? " text-blue-kokumi animation-active "
-                    : " text-gray-400 hover:text-blue-kokumi ")
+                    ? " text-red-kokumi animation-active "
+                    : " text-gray-400 hover:text-red-kokumi ")
                 }
               >
                 Contact
               </div>
+            </Link>
+            <Link
+              href="/contact"
+              className="text-white inline-block py-2 px-5 font-medium rounded-full"
+              style={{ background: "#ff7774" }}
+            >
+              Add Wallet
             </Link>
           </ul>
         </nav>
@@ -79,7 +84,7 @@ const Navbar = () => {
                 className={
                   "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                   (router.pathname == "/"
-                    ? "  border-blue-900 text-blue-kokumi"
+                    ? "  border-blue-900 text-red-kokumi"
                     : " border-transparent")
                 }
               >
@@ -104,12 +109,12 @@ const Navbar = () => {
                 Home
               </div>
             </Link>
-            <Link activeClassName="active" href="/menupage">
+            <Link href="/menupage">
               <div
                 className={
                   "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                   (router.pathname == "/menupage"
-                    ? "  border-blue-900 text-blue-kokumi"
+                    ? "  border-blue-900 text-red-kokumi"
                     : " border-transparent ")
                 }
               >
@@ -129,12 +134,12 @@ const Navbar = () => {
               </div>
             </Link>
 
-            <Link activeClassName="active" href="/contact">
+            <Link href="/contact">
               <div
                 className={
                   "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                   (router.pathname == "/contact"
-                    ? "  border-blue-900 text-blue-kokumi"
+                    ? "  border-blue-900 text-red-kokumi"
                     : " border-transparent ")
                 }
               >
