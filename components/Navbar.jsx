@@ -66,10 +66,10 @@ const Navbar = () => {
             </Link>
             <Link
               href="/contact"
-              className="text-white inline-block py-2 px-5 font-medium rounded-full"
+              className="text-white  inline-block py-2 px-5 font-medium rounded-full"
               style={{ background: "#ff7774" }}
             >
-              Add Wallet
+              Login
             </Link>
           </ul>
         </nav>
