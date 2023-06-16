@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > span {
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logo > span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social > * {
+  fill: #ff7774;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+  }
+}

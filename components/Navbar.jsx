@@ -21,7 +21,7 @@ const Navbar = () => {
           (scrollActive ? " shadow-md pt-0 bg-white" : " pt-4 bg-transparent")
         }
       >
-        <nav className="max-w-screen-xl mx-auto grid grid-flow-col py-2 px-3">
+        <nav className="max-w-screen-xl mx-auto grid grid-flow-col py-2 px-10">
           <Link href="/">
             <div className={css.logo}>
               <Image src="/image/Logo.png" alt="Logo" width={80} height={80} />
@@ -40,11 +40,11 @@ const Navbar = () => {
                 Home
               </div>
             </Link>
-            <Link href="/menupage">
+            <Link href="/menu">
               <div
                 className={
                   "px-4 py-2 mx-2 cursor-pointer animation-hover font-semibold inline-block relative" +
-                  (router.pathname == "/menupage"
+                  (router.pathname == "/menu"
                     ? " text-red-kokumi animation-active "
                     : " text-gray-400 hover:text-red-kokumi ")
                 }
@@ -65,7 +65,7 @@ const Navbar = () => {
               </div>
             </Link>
             <Link
-              href="/contact"
+              href="#"
               className="text-white  inline-block py-2 px-5 font-medium rounded-full"
               style={{ background: "#ff7774" }}
             >
@@ -109,11 +109,11 @@ const Navbar = () => {
                 Home
               </div>
             </Link>
-            <Link href="/menupage">
+            <Link href="/menu">
               <div
                 className={
                   "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
-                  (router.pathname == "/menupage"
+                  (router.pathname == "/menu"
                     ? "  border-blue-900 text-red-kokumi"
                     : " border-transparent ")
                 }
