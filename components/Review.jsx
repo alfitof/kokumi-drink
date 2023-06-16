@@ -71,10 +71,16 @@ const Review = () => {
           height={120}
           className="rounded-full mb-4"
         />
-        <h3 className="uppercase text-2xl mb-2">{name}</h3>
-        <h4 className="text-2xl mb-2">{role}</h4>
+        <h3 className="text-center font-bold text-2xl text-base-sub-title mb-2">
+          {name}
+        </h3>
+        <h4 className="text-center font-normal text-xl text-base-sub-title mb-2">
+          {role}
+        </h4>
         <Stars stars={stars} />
-        <p className="text-center">{comment}</p>
+        <p className="text-center text-center font-normal text-medium text-base-sub-title">
+          {comment}
+        </p>
         <button
           className="absolute bg-red-kokumi border-none outline-none p-4 rounded-md text-white font-bold text-3xl right-0  top-20 hover: cursor-pointer "
           onClick={nextReview}
