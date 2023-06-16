@@ -33,7 +33,13 @@ export default function Homepage() {
           </a>
         </div>
         <div className="imgBox w-[600px] flex justify-end pr-[10px] mt-[15px]">
-          <Image src={image} width={"350"} height={"350"} className="kokumi" />
+          <Image
+            src={image}
+            width={"350"}
+            height={"350"}
+            alt="drink"
+            className="kokumi"
+          />
         </div>
       </div>
       <ul className="thumb absolute left-[50%] bottom-[20px] flex">
@@ -41,6 +47,7 @@ export default function Homepage() {
           <Image
             src="/image/rainbow mini.png"
             width={60}
+            alt="drink"
             height={60}
             onClick={() => {
               clickImage("/image/rainbow miring.png");
@@ -51,6 +58,7 @@ export default function Homepage() {
           <Image
             src="/image/cheese mini.png"
             width={60}
+            alt="drink"
             height={60}
             onClick={() => {
               clickImage("/image/cheese miring.png");
@@ -61,6 +69,7 @@ export default function Homepage() {
           <Image
             src="/image/88rising mini.png"
             width={60}
+            alt="drink"
             height={60}
             onClick={() => {
               clickImage("/image/88rising miring.png");
@@ -71,6 +80,7 @@ export default function Homepage() {
           <Image
             src="/image/boba mini.png"
             width={60}
+            alt="drink"
             height={60}
             onClick={() => {
               clickImage("/image/boba miring.png");
